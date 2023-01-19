@@ -44,10 +44,12 @@ data['Sell Signals']=sell_signals
 
 print(data)
 
+plt.figure(figsize=(12,6))
 plt.plot(data['Close'], label='share price', alpha=0.6, color='lightgray')
 plt.plot(data[f'SMA_{ma_1}'], label=f'MA {ma_1}' ,color='orange', linestyle='--')
 plt.plot(data[f'SMA_{ma_2}'], label=f'MA {ma_2}' ,color='blue',  linestyle='--')
 plt.scatter(data.index, data['Buy Signals'], label='Buy', marker='^', color='green', lw=1)
 plt.scatter(data.index, data['Sell Signals'], label='Sell', marker='^', color='red', lw=1)
 plt.legend(loc='upper left')
+plt.savefig('figure.jpg')
 plt.show()

@@ -1,0 +1,1 @@
+Simple implementation of moving average crossover strategy for buying/ selling stocks
